@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9d7c70621a2b4344b8140b2a152e590f" Name="Diagram1">
+        <EntityTypeShape EntityType="dbWebThuVienModel.ChiTietHoaDon" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbWebThuVienModel.HoaDon" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbWebThuVienModel.KhachHang" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbWebThuVienModel.LoaiSach" Width="1.5" PointX="0.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbWebThuVienModel.NhanVien" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbWebThuVienModel.Sach" Width="1.5" PointX="3" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbWebThuVienModel.sysdiagram" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="dbWebThuVienModel.FK_ChiTietHoaDon_MaSach" ManuallyRouted="false" />
+        <AssociationConnector Association="dbWebThuVienModel.FK_CTHD_HD" ManuallyRouted="false" />
+        <AssociationConnector Association="dbWebThuVienModel.FK_HoaDon_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="dbWebThuVienModel.FK_HoaDon_NhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="dbWebThuVienModel.FK_Sach_MaLoaiSach" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
