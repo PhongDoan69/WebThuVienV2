@@ -1,9 +1,101 @@
-﻿@{
-    ViewBag.Title = "About";
-}
-<main aria-labelledby="title">
-    <h2 id="title">@ViewBag.Title.</h2>
-    <h3>@ViewBag.Message</h3>
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
 
-    <p>Use this area to provide additional information.</p>
-</main>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .about-section {
+            padding-top: 100px;
+            background-color: white;
+            color: black;
+            font-size: 18px;
+            text-align: justify;
+        }
+
+        .container-sub {
+            margin: 20px 20px;
+            color: black;
+        }
+
+        .profiles {
+            float: left;
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 80px;
+            text-align: center;
+        }
+
+        .profile {
+            float: left;
+            width: 25%
+        }
+
+            .profile .profile-img {
+                height: 150px;
+                width: 150px;
+                border-radius: 50%;
+            }
+
+            .profile > p {
+                margin: 20px 10px 80px 10px;
+                display: inline-block;
+                font-size: 16px;
+            }
+
+        h1 {
+            margin-top: -40px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #004D4D;
+        }
+    </style>
+</head>
+<body>
+    <div class="about-section">
+        <h1 style="text-align:center;">Giới thiệu</h1>
+
+        <p style="opacity: 0.6; font-style: italic; text-align: center;">"Đọc sách cho tâm trí cũng cần như thể dục cho cơ thể."</p>
+        <div style="padding:10px;"><b>PAD Library</b>  là một nơi tuyệt vời để đọc và mượn sách với hàng ngàn tựa sách từ các thể loại khác nhau.. </div>
+        <div style="padding:10px;"><b>PAD Library</b>  có một bộ sưu tập đa dạng các loại sách từ tiểu thuyết, sách kinh tế, sách thiếu nhi cho đến sách khoa học và công nghệ. Đội ngũ thủ thư của chúng tôi là những người đam mê sách và sẵn sàng tư vấn và hỗ trợ bạn trong việc tìm kiếm và đọc sách.</div>
+        <div style="padding:10px;"><b>PAD Library</b>  mong rằng có thể đồng hành cùng bạn trong quá trình nâng cao tri thức cho bản thân cho bản thân, giúp bạn tự tin và tốt hơn mỗi ngày.</div>
+        <div style="padding:10px;">Hiện tại, PAD Library chỉ có DUY NHẤT 1 cửa hàng tại số 371 Nguyễn Kiệm, Phường 3, Q. Gò Vấp TP.HCM. Quý khách có thể đến trải nghiệm và mua sách từ 9h – 21h hằng ngày (bao gồm cả Chủ nhật và ngày lễ).  </div>
+        <div style="padding:10px;">Đến với PAD Library khách hàng sẽ trải nghiệm việc mua sắm trực tuyến với các bước thanh toán an toàn, đơn giản, nhanh chóng, đáp ứng tiêu chuẩn Quốc tế.</div>
+        <div style="padding:10px;">
+            Với phương châm <b style="color: #0c6363;font-size:22px">“Chất lượng thật - Giá trị thật”</b> PAD Library luôn nỗ lực không ngừng nhằm nâng cao chất lượng dịch vụ để khách hàng được trải nghiệm các dịch vụ chăm sóc tốt nhất.
+        </div>
+    </div>
+
+
+    <div class="container-sub">
+        <div class="profiles">
+            <div class="profile">
+                <img src="~/Image/about4.jpg" class="profile-img">
+                <p>Thương hiệu uy tín tại Việt Nam</p>
+            </div>
+            <div class="profile">
+                <img src="~/Image/about1.jpg" class="profile-img">
+                <p>Thanh toán khi nhận hàng</p>
+            </div>
+            <div class="profile">
+                <img src="~/Image/about3.jpg" class="profile-img">
+                <p>Đổi trả hàng miễn phí trong vòng 14 ngày</p>
+            </div>
+            <div class="profile">
+                <img src="~/Image/about2.jpg" class="profile-img" style="width:195px;">
+                <p>Nhận hàng trong vòng 24h</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

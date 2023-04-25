@@ -1,0 +1,144 @@
+﻿@model WebThuVienV2.Models.Sach
+@using WebThuVienV2.Models
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="container body-content">
+    <h2 style="padding-top:20px">Chi tiết sản phẩm</h2>
+    <hr />
+</div>
+
+<div class="container body-content">
+    <div class="card">
+        <div class="container-fliud">
+            <div class="wrapper row">
+                <div class="preview col-md-6">
+                    <div class="preview-pic tab-content">
+                        <i class="img">
+                            @Html.Image("../../Image/" + Model.HinhAnh, "", "501", "501")
+                        </i>
+                    </div>
+                </div>
+                <div class="details col-md-6">
+                    <h3 class="product-title">@Html.DisplayFor(model => model.TenSach)</h3>
+                    <p class="review-no">Nhà xuất bản: @Html.DisplayFor(model => model.NhaXuaBan)</p>
+                    <h4 class="price">Giá: <span>@string.Format("{0:#,##0.##}₫", Model.GiaTien)</span></h4>
+                    <pre class="commit">
+ CAM KẾT KHI MUA SẮM
+    - Tư vấn nhiệt tình & tận tâm.
+    - Đảm bảo nguồn gốc & chất lượng sản phẩm.
+    - Tích lũy điểm, nâng hạng thẻ VIP & tận hưởng ưu đãi đặc quyền.
+                    </pre>
+                    @if (User.IsInRole("Admin"))
+                    {
+
+                    }
+                    else
+                    {
+                        <a class="btn-addtocart" href="@Url.Action("AddToCart", "GioHang", new { MaSP = Model.MaSP })">
+                            <div class="glyphicon glyphicon-shopping-cart"></div>
+                            Thêm vào giỏ hàng
+                        </a>
+                        <a class="btn-backtolist" href="@Url.Action("Index", "HienThiSanPham", new { MaSP = Model.MaSP })">
+                            <div class="glyphicon glyphicon-backward"></div>
+                            Quay lại
+                        </a>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <p style="font-weight:bold; font-size:20px" class="text-center">Thông tin sản phẩm: </p>
+    <div class=" description text-justify">
+        @Html.DisplayFor(model => model.MoTaSP)
+    </div>
+</div>
+
+
+<style>
+    div.product-name > h3 {
+        display: inline;
+    }
+
+    body {
+        font-family: Lato, sans-serif;
+    }
+
+    .commit {
+        background-color: white;
+        border: none;
+        border-top: 2px solid gray;
+        font-family: Lato, sans-serif;
+        font-size: 14px;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+
+    .card {
+        margin-top: 10px;
+        padding: 3em;
+        line-height: 1.5em;
+    }
+
+    .product-title, .price, .sizes {
+        text-transform: UPPERCASE;
+    }
+
+        .price span {
+            color: #e68b24;
+        }
+
+    .product-title {
+        margin-top: 0;
+    }
+
+    .description {
+        font-size: 18px;
+        white-space: pre-line;
+    }
+
+    .btn-addtocart {
+        background-color: white;
+        border: none;
+        color: black;
+        padding: 8px 16px;
+        display: inline-block;
+        font-size: 16px;
+        margin: auto;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        text-decoration: none;
+        border: 2px solid #c47135;
+    }
+
+        .btn-addtocart:hover {
+            background-color: #0c6363;
+            color: #FF2;
+            text-decoration: none;
+        }
+
+    .btn-backtolist {
+        background-color: #0c6363;
+        border: none;
+        color: white;
+        padding: 8px 16px;
+        display: inline-block;
+        font-size: 16px;
+        margin: auto;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        text-decoration: none;
+        border: 2px solid #c47135;
+    }
+
+        .btn-backtolist:hover {
+            background-color: #0c6363;
+            color: #FF2;
+            text-decoration: none;
+        }
+</style>
