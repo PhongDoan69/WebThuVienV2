@@ -348,6 +348,7 @@
     <Content Include="Images\nuoctaytrangChacott.png" />
     <Content Include="Images\nuoctaytrangDrJart.png" />
     <Content Include="Images\nuoctaytrangSVR.png" />
+    <Content Include="Images\padlogo.png" />
     <Content Include="Images\phanmaFOX.png" />
     <Content Include="Images\phanmat4mauFOX.png" />
     <Content Include="Images\phannendangnuocGuerlain.png" />
@@ -363,9 +364,9 @@
     <Content Include="Images\sach7.jpg" />
     <Content Include="Images\sach8.jpg" />
     <Content Include="Images\sach9.jpg" />
-    <Content Include="Images\slider1.jpeg" />
-    <Content Include="Images\slider2.jpg" />
-    <Content Include="Images\slider3.jpg" />
+    <Content Include="Images\slider1.jpg" />
+    <Content Include="Images\slider22.jpg" />
+    <Content Include="Images\slider33.jpg" />
     <Content Include="Images\slider5.jpg" />
     <Content Include="Images\sonChanel.png" />
     <Content Include="Images\sonduongLadykin.png" />
