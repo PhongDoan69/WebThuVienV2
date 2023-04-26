@@ -5,7 +5,7 @@
 }
 
 <div class="container body-content">
-    <h2 style="padding-top:20px">Chi tiết sản phẩm</h2>
+    <h2 style="padding-top:20px">Chi tiết sách</h2>
     <hr />
 </div>
 
@@ -16,13 +16,13 @@
                 <div class="preview col-md-6">
                     <div class="preview-pic tab-content">
                         <i class="img">
-                            @Html.Image("../../Image/" + Model.HinhAnh, "", "501", "501")
+                            @Html.Image("../../Images/" + Model.HinhAnh, "", "501", "501")
                         </i>
                     </div>
                 </div>
                 <div class="details col-md-6">
                     <h3 class="product-title">@Html.DisplayFor(model => model.TenSach)</h3>
-                    <p class="review-no">Nhà xuất bản: @Html.DisplayFor(model => model.NhaXuaBan)</p>
+                    <p class="review-no">Nhà xuất bản: @Html.DisplayFor(model => model.NhaXuatBan)</p>
                     <h4 class="price">Giá: <span>@string.Format("{0:#,##0.##}₫", Model.GiaTien)</span></h4>
                     <pre class="commit">
  CAM KẾT KHI MUA SẮM
@@ -36,11 +36,11 @@
                     }
                     else
                     {
-                        <a class="btn-addtocart" href="@Url.Action("AddToCart", "GioHang", new { MaSP = Model.MaSP })">
+                        <a class="btn-addtocart" href="@Url.Action("AddToCart", "GioHang", new { MaSP = Model.MaSach })">
                             <div class="glyphicon glyphicon-shopping-cart"></div>
                             Thêm vào giỏ hàng
                         </a>
-                        <a class="btn-backtolist" href="@Url.Action("Index", "HienThiSanPham", new { MaSP = Model.MaSP })">
+                        <a class="btn-backtolist" href="@Url.Action("Index", "HienThiSanPham", new { MaSP = Model.MaSach })">
                             <div class="glyphicon glyphicon-backward"></div>
                             Quay lại
                         </a>
@@ -50,9 +50,9 @@
             </div>
         </div>
     </div>
-    <p style="font-weight:bold; font-size:20px" class="text-center">Thông tin sản phẩm: </p>
+    <p style="font-weight:bold; font-size:20px" class="text-center">Mô tả sách: </p>
     <div class=" description text-justify">
-        @Html.DisplayFor(model => model.MoTaSP)
+        @Html.DisplayFor(model => model.MoTa)
     </div>
 </div>
 

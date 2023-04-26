@@ -16,28 +16,28 @@ namespace WebMyPham.Controllers
         public ActionResult Index(string sortingOrder, string searchString, int? pageNo, string maLoaiSach = "0")
         {
             ViewBag.CurrentSortOrder = sortingOrder;
-            ViewBag.TenLoaiSP = "Tất cả sản phẩm";
+            ViewBag.TenLoaiSach = "Tất cả sách";
             var sach = db.Saches.Include(x => x.LoaiSach);
-            //Tim kiem theo ma loai san pham
+            //Tim kiem theo ma loai sach
             if (maLoaiSach != "0")
             {
                 sach = db.Saches.Where(s => s.MaLoaiSach == maLoaiSach);
                 switch (maLoaiSach)
                 {
                     case "KH":
-                        ViewBag.TenLoaiSP = "Khoa học";
+                        ViewBag.TenLoaiSach = "Khoa học";
                         break;
                     case "KTH":
-                        ViewBag.TenLoaiSP = "Kinh tế học";
+                        ViewBag.TenLoaiSach = "Kinh tế học";
                         break;
                     case "TL":
-                        ViewBag.TenLoaiSP = "Tâm lý";
+                        ViewBag.TenLoaiSach = "Tâm lý";
                         break;
                     case "TT":
-                        ViewBag.TenLoaiSP = "Tiểu thuyết";
+                        ViewBag.TenLoaiSach = "Tiểu thuyết";
                         break;
                     case "VH":
-                        ViewBag.TenLoaiSP = "Văn học";
+                        ViewBag.TenLoaiSach = "Văn học";
                         break;
                 }
             }

@@ -14,7 +14,7 @@ namespace WebThuVienV2.Controllers
         public ActionResult Index()
         {
             var sach = db.Saches.Include(s => s.LoaiSach);
-            return View(sach);
+            return View(sach);  
         }
 
         public ActionResult About()

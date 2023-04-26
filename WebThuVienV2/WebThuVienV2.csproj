@@ -468,6 +468,7 @@
     <Content Include="Views\ChiTietHoaDon\Details.cshtml" />
     <Content Include="Views\ChiTietHoaDon\Edit.cshtml" />
     <Content Include="Views\ChiTietHoaDon\Index.cshtml" />
+    <Content Include="Views\HienThiSanPham\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
