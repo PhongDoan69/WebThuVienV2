@@ -99,7 +99,7 @@
         if (count < 8)
         {
             var name = "";
-            if (item.TenSach.Length < 35)
+            if(item.TenSach.Length < 35)
             {
                 name = item.TenSach;
             }
@@ -112,23 +112,22 @@
                     @Html.Image("../Images/" + item.HinhAnh, "alt", "210", "210")
                 </a>
 
-                <h4 class="name"><a href="@Url.Action("Details", "Sach", new { id = item.MaSach })"> @Html.DisplayFor(modelItem => item)</a></h4>
-
+                <h4 class="name"><a href="@Url.Action("Details", "Sach", new { id = item.MaSach })">@Html.DisplayFor(modelItem => name)</a></h4>
+                <hr />
                 <p class="price-label" style="color: #e68b24">@string.Format("{0:#,##0.##}₫", item.GiaTien)</p>
                 <br />
             </li>
             count++;
         }
-
     }
 </ul>
 <div class="text-center">
     <a class="btn-allview" href="@Url.Action("Index","HienThiSanPham")"> Xem tất cả sản phẩm</a>
 </div>
 <style>
-    * {
+   /* * {
         box-sizing: border-box;
-    }
+    }*/
 
     .product {
         background-color: white;
@@ -161,10 +160,14 @@
         padding: 0 8px;
         animation: imageFadeIn ease 2s;
     }
+    .carousel-inner{
+        height: 350px;
+        margin-top: 30px;
+    }
 
-        .top-items:hover {
-            box-shadow: 0 0 10px #ccc;
-        }
+    .top-items:hover {
+        box-shadow: 0 0 10px #ccc;
+    }
 
     .item-img {
         display: block;

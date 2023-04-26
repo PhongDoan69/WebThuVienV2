@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 using System.Data.Entity;
 using WebThuVienV2.Models;
 
-namespace WebMyPham.Controllers
+namespace WebThuVienV2.Controllers
 {
     public class HienThiSanPhamController : Controller
     {
@@ -45,17 +45,17 @@ namespace WebMyPham.Controllers
             if (!String.IsNullOrEmpty(searchString))
             {
                 sach = db.Saches.Where(x => x.TenSach.ToUpper().Contains(searchString.ToUpper())).OrderBy(x => x.TenSach);
-                ViewBag.SoLuongSP = "Tìm thấy " + sach.ToList().Count() + " kết quả với từ khóa " + "\"" + searchString + "\"";
+                ViewBag.SoLuongSach = "Tìm thấy " + sach.ToList().Count() + " kết quả với từ khóa " + "\"" + searchString + "\"";
             }
             else
-                ViewBag.SoLuongSP = "Có tất cả " + sach.ToList().Count() + " kết quả ";
+                ViewBag.SoLuongSach = "Có tất cả " + sach.ToList().Count() + " kết quả ";
             //Sap xep
             switch (sortingOrder)
             {
-                case "dongia":
+                case "donggia":
                     sach = sach.OrderBy(s => s.GiaTien);
                     break;
-                case "dongia_desc":
+                case "donggia_desc":
                     sach = sach.OrderByDescending(s => s.GiaTien);
                     break;
                 case "ten":

@@ -326,7 +326,9 @@
     <Content Include="Images\about2.jpg" />
     <Content Include="Images\about3.jpg" />
     <Content Include="Images\about4.jpg" />
+    <Content Include="Images\banner1.jpg" />
     <Content Include="Images\bannerSP1.jpg" />
+    <Content Include="Images\blaz-photo-zMRLZh40kms-unsplash.jpg" />
     <Content Include="Images\chikemayFOX.png" />
     <Content Include="Images\chuotmiDior.png" />
     <Content Include="Images\chuotmiKATE.png" />
@@ -356,6 +358,7 @@
     <Content Include="Images\phannuocSulwhasoo.png" />
     <Content Include="Images\posterLarocheposay.png" />
     <Content Include="Images\sach1.jpg" />
+    <Content Include="Images\sach10.jpg" />
     <Content Include="Images\sach2.jpg" />
     <Content Include="Images\sach3.jpg" />
     <Content Include="Images\sach4.jpg" />
