@@ -13,11 +13,11 @@ namespace WebThuVienV2.Controllers
     {
         // GET: HienThiSanPham
         dbWebThuVienEntities db = new dbWebThuVienEntities();
-        public ActionResult Index(string sortingOrder, string searchString, int? pageNo, string maLoaiSach = "0")
+        public ActionResult Index(string sortingOrder, string searchString,  string maLoaiSach = "0")
         {
             ViewBag.CurrentSortOrder = sortingOrder;
             ViewBag.TenLoaiSach = "Tất cả sách";
-            var sach = db.Saches.Include(x => x.LoaiSach);
+            var sach = db.Saches.Include(a => a.LoaiSach);
             //Tim kiem theo ma loai sach
             if (maLoaiSach != "0")
             {
@@ -52,10 +52,10 @@ namespace WebThuVienV2.Controllers
             //Sap xep
             switch (sortingOrder)
             {
-                case "donggia":
+                case "dongia":
                     sach = sach.OrderBy(s => s.GiaTien);
                     break;
-                case "donggia_desc":
+                case "dongia_desc":
                     sach = sach.OrderByDescending(s => s.GiaTien);
                     break;
                 case "ten":
@@ -69,8 +69,6 @@ namespace WebThuVienV2.Controllers
                     break;
             }
 
-            int sizePage = 16;
-            int page = (pageNo ?? 1);
             return View(sach.ToList());
         }
     }
