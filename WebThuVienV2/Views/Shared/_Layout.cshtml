@@ -31,14 +31,14 @@
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="@Url.Action("Index","HienThiSanPham", new {maLoaiSP = "KH"})">Khoa học</a></li>
-                            <li><a href="@Url.Action("Index","HienThiSanPham", new {maLoaiSP = "KTH"})">Kinh tế học</a></li>
-                            <li><a href="@Url.Action("Index","HienThiSanPham", new {maLoaiSP = "TL"})">Tâm lý</a></li>
-                            <li><a href="@Url.Action("Index","HienThiSanPham", new {maLoaiSP = "TT"})">Tiểu thuyết</a></li>
-                            <li><a href="@Url.Action("Index","HienThiSanPham", new {maLoaiSP = "VH"})">Văn học</a></li>
+                            <li><a href="@Url.Action("Index","HienThiSanPham", new {maLoaiSach = "KH"})">Khoa học</a></li>
+                            <li><a href="@Url.Action("Index","HienThiSanPham", new {maLoaiSach = "KTH"})">Kinh tế học</a></li>
+                            <li><a href="@Url.Action("Index","HienThiSanPham", new {maLoaiSach = "TL"})">Tâm lý</a></li>
+                            <li><a href="@Url.Action("Index","HienThiSanPham", new {maLoaiSach = "TT"})">Tiểu thuyết</a></li>
+                            <li><a href="@Url.Action("Index","HienThiSanPham", new {maLoaiSach = "VH"})">Văn học</a></li>
                         </ul>
                     </li>
-                    
+
                     <li>@Html.ActionLink("Giới thiệu", "About", "Home")</li>
                     <li>@Html.ActionLink("Liên hệ", "Contact", "Home")</li>
                     @if (User.IsInRole("Admin"))
@@ -56,6 +56,7 @@
                     }
 
                 </ul>
+                @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>

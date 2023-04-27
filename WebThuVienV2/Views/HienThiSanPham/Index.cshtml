@@ -63,14 +63,14 @@
         </button>
         <ul class="dropdown-menu">
             <li>
-                <a href="@Url.Action("Index","HienThiSanPham", new { sortingOrder = "donggia_desc"})">
+                <a href="@Url.Action("Index","HienThiSanPham", new { sortingOrder = "dongia_desc"})">
                     Giá từ cao đến thấp
                     <i class="glyphicon glyphicon-sort-by-attributes-alt">
                     </i>
                 </a>
             </li>
             <li>
-                <a href="@Url.Action("Index","HienThiSanPham", new { sortingOrder = "donggia" })">
+                <a href="@Url.Action("Index","HienThiSanPham", new { sortingOrder = "dongia" })">
                     Giá từ thấp đến cao
                     <i class="glyphicon glyphicon-sort-by-attributes">
                     </i>
@@ -132,10 +132,9 @@
 
 
 <style>
-
     .container-menu {
         margin: 50px 0;
-        display: inline-block;
+        display: block;
         min-height: 350px;
     }
 
@@ -151,10 +150,9 @@
         font-size: 16px;
     }
 
-
-    .name > a {
-        color: black;
-    }
+        .name > a {
+            color: black;
+        }
 
             .name > a:hover {
                 color: #b61919;
