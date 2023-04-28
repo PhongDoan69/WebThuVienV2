@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using WebThuVienV2.Models;
 
+
 namespace WebThuVienV2.Controllers
 {
     public class LoaiSachController : Controller
@@ -15,12 +16,14 @@ namespace WebThuVienV2.Controllers
         private dbWebThuVienEntities db = new dbWebThuVienEntities();
 
         // GET: LoaiSach
+        [Authorize(Roles = "Admin")]
         public ActionResult Index()
         {
             return View(db.LoaiSaches.ToList());
         }
 
         // GET: LoaiSach/Details/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Details(string id)
         {
             if (id == null)
@@ -36,6 +39,7 @@ namespace WebThuVienV2.Controllers
         }
 
         // GET: LoaiSach/Create
+        [Authorize(Roles = "Admin")]
         public ActionResult Create()
         {
             return View();
@@ -59,6 +63,7 @@ namespace WebThuVienV2.Controllers
         }
 
         // GET: LoaiSach/Edit/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(string id)
         {
             if (id == null)
@@ -78,7 +83,7 @@ namespace WebThuVienV2.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "MaLoaiSach,TenLoaiSach")] LoaiSach loaiSach)
+        public ActionResult Edit([Bind(Include = "MaLoaiSP,TenLoaiSP")] LoaiSach loaiSach)
         {
             if (ModelState.IsValid)
             {
@@ -90,6 +95,7 @@ namespace WebThuVienV2.Controllers
         }
 
         // GET: LoaiSach/Delete/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(string id)
         {
             if (id == null)

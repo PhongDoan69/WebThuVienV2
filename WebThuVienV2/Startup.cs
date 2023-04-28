@@ -13,7 +13,7 @@ namespace WebThuVienV2
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
-            CreateRoleandUser(); //Đã gọi tạo nên ẩn
+            //CreateRoleandUser(); //Đã gọi tạo nên ẩn
         }
         //Hàm tạo 2 tài khoản để test
         private void CreateRoleandUser()

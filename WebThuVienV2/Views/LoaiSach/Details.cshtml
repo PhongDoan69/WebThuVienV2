@@ -4,23 +4,23 @@
     ViewBag.Title = "Details";
 }
 
-<h2 class="text-center" style="margin-top:40px;">Chi tiết loại sản phẩm</h2>
+<h2 class="text-center" style="margin-top:40px;">Chi tiết loại sách</h2>
 
 <div>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            Loại sản phẩm
+            Thể loại sách
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.TenLoaiSP)
+            @Html.DisplayFor(model => model.TenLoaiSach)
         </dd>
 
     </dl>
 </div>
 <p class="action">
-    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.MaLoaiSP })
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.MaLoaiSach })
     @Html.ActionLink("Trở lại danh sách", "Index")
 </p>
 <style>
