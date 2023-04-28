@@ -18,12 +18,15 @@
         </form>
     }
 </div>
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<div class="text-center">
+    <a class="btn-create" href="@Url.Action("Create", "Sach")">Tạo mới</a>
+</div>
+
+
+
 <table class="table table-bordered">
     <tr style="background-color:#e97777; color:white;">
-        <th style="width:5%;"> Mã SP</th>
+        <th style="width:5%;"> Mã Sách</th>
         <th style="width:12%">
             Tên
         </th>

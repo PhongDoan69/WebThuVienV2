@@ -118,7 +118,7 @@ namespace WebThuVienV2.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.MaLoaiSP = new SelectList(db.LoaiSaches, "MaLoaiSach", "TenLoaiSach", sach.MaLoaiSach);
+            ViewBag.MaLoaiSach = new SelectList(db.LoaiSaches, "MaLoaiSach", "TenLoaiSach", sach.MaLoaiSach);
             return View(sach);
         }
 
@@ -145,7 +145,7 @@ namespace WebThuVienV2.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.MaLoaiSP = new SelectList(db.LoaiSaches, "MaLoaiSach", "TenLoaiSach", sach.MaLoaiSach);
+            ViewBag.MaLoaiSach = new SelectList(db.LoaiSaches, "MaLoaiSach", "TenLoaiSach", sach.MaLoaiSach);
             return View(sach);
         }
 
