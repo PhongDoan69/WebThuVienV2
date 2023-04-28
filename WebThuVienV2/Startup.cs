@@ -12,9 +12,8 @@ namespace WebThuVienV2
     {
         public void Configuration(IAppBuilder app)
         {
-
             ConfigureAuth(app);
-            //CreateRoleandUser(); //Đã gọi tạo nên ẩn
+            CreateRoleandUser(); //Đã gọi tạo nên ẩn
         }
         //Hàm tạo 2 tài khoản để test
         private void CreateRoleandUser()
@@ -28,7 +27,7 @@ namespace WebThuVienV2
                 role.Name = "Admin";
                 roleManager.Create(role);
                 role = new IdentityRole();
-                role.Name = "admin";
+                role.Name = "Member";
                 roleManager.Create(role);
 
 

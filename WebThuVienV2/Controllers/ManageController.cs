@@ -6,9 +6,7 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using WebThuVienV2.Controllers;
 using WebThuVienV2.Models;
-using WebThuVienV2;
 
 namespace WebThuVienV2.Controllers
 {
