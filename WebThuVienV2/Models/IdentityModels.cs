@@ -21,7 +21,7 @@ namespace WebThuVienV2.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("ThuViendb", throwIfV1Schema: false)
         {
         }
 

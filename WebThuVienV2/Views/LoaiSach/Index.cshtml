@@ -4,30 +4,65 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2 class="text-center" style="margin-top:40px;">Loại sản phẩm</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.TenLoaiSach)
-        </th>
-        <th></th>
-    </tr>
+<div class="text-center">
+    <a class="btn-create" href="@Url.Action("Create", "LoaiSanPham")">Tạo mới</a>
+</div>
+<div class="container">
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.TenLoaiSach)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MaLoaiSach }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MaLoaiSach }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MaLoaiSach })
-        </td>
-    </tr>
-}
+    <table class="table">
+        <tr>
+            <th>
+                Thể loại sách
+            </th>
+            <th></th>
+        </tr>
 
-</table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenLoaiSach)
+                </td>
+                <td class="btn-action">
+                    <a href="@Url.Action("Edit", new { id = item.MaLoaiSach})" class="btn bg-danger btn-success btn-sm">Sửa</a>
+                    <a href="@Url.Action("Details", new { id = item.MaLoaiSach})" class="btn bg-danger btn-info btn-sm">Chi tiết</a>
+                    <a href="@Url.Action("Delete", new { id = item.MaLoaiSach})" class="btn bg-danger btn-danger btn-sm">Xóa</a>
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+<style>
+    .btn-create {
+        background-color: white;
+        border: none;
+        color: black;
+        padding: 8px 16px;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        text-decoration: none;
+        border: 2px solid #c47135;
+    }
+
+        .btn-create:hover {
+            background-color: #0c6363;
+            color: #FF2;
+            text-decoration: none;
+        }
+
+    .btn-sm, .btn-group-sm > .btn {
+        padding: 5px 10px;
+        font-size: 12px;
+        line-height: 1.5;
+        float: right;
+        border-radius: 3px;
+        margin: 0 5px;
+    }
+</style>

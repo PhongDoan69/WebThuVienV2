@@ -158,17 +158,20 @@
     <Reference Include="Microsoft.Net.Http.Headers, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Net.Http.Headers.2.2.0\lib\netstandard2.0\Microsoft.Net.Http.Headers.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    <Reference Include="Microsoft.Owin, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Owin.4.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Owin.Host.SystemWeb.4.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Owin.Security.4.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Owin.Security.OAuth.4.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
     </Reference>
     <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
       <HintPath>packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
@@ -303,6 +306,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ChiTietHoaDon.cs">
       <DependentUpon>WebThuVienEF.tt</DependentUpon>
     </Compile>
@@ -318,6 +323,7 @@
     <Compile Include="Models\LoaiSach.cs">
       <DependentUpon>WebThuVienEF.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\NhanVien.cs">
       <DependentUpon>WebThuVienEF.tt</DependentUpon>
     </Compile>
@@ -343,8 +349,13 @@
       <DependentUpon>WebThuVienEF.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\ThuViendb.mdf" />
+    <Content Include="App_Data\ThuViendb_log.ldf">
+      <DependentUpon>ThuViendb.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -358,36 +369,8 @@
     <Content Include="Images\about3.jpg" />
     <Content Include="Images\about4.jpg" />
     <Content Include="Images\banner1.jpg" />
-    <Content Include="Images\bannerSP1.jpg" />
     <Content Include="Images\blaz-photo-zMRLZh40kms-unsplash.jpg" />
-    <Content Include="Images\chikemayFOX.png" />
-    <Content Include="Images\chuotmiDior.png" />
-    <Content Include="Images\chuotmiKATE.png" />
-    <Content Include="Images\dautaytrangFOX.png" />
-    <Content Include="Images\dautaytrangShuUemura.png" />
-    <Content Include="Images\geltamtrimunNarukoTee.png" />
-    <Content Include="Images\kematnuocPassionCat.jpg" />
-    <Content Include="Images\kematTonymoly.png" />
-    <Content Include="Images\kemchekhuyetdiemFOX.png" />
-    <Content Include="Images\kemdieuchinhsactodaFOX.png" />
-    <Content Include="Images\kemduongamOHUI.png" />
-    <Content Include="Images\kemnenduongamFOX.png" />
-    <Content Include="Images\kemnenKATE.png" />
-    <Content Include="Images\kevienmatdanggelFOX.png" />
-    <Content Include="Images\mascaraFOX.png" />
-    <Content Include="Images\mascaraRene.png" />
-    <Content Include="Images\mayruamatHonestBeauty.png" />
-    <Content Include="Images\nuoctaytrangCelderma.png" />
-    <Content Include="Images\nuoctaytrangChacott.png" />
-    <Content Include="Images\nuoctaytrangDrJart.png" />
-    <Content Include="Images\nuoctaytrangSVR.png" />
     <Content Include="Images\padlogo.png" />
-    <Content Include="Images\phanmaFOX.png" />
-    <Content Include="Images\phanmat4mauFOX.png" />
-    <Content Include="Images\phannendangnuocGuerlain.png" />
-    <Content Include="Images\phannuocFOX.png" />
-    <Content Include="Images\phannuocSulwhasoo.png" />
-    <Content Include="Images\posterLarocheposay.png" />
     <Content Include="Images\sach1.jpg" />
     <Content Include="Images\sach10.jpg" />
     <Content Include="Images\sach2.jpg" />
@@ -402,24 +385,6 @@
     <Content Include="Images\slider22.jpg" />
     <Content Include="Images\slider33.jpg" />
     <Content Include="Images\slider5.jpg" />
-    <Content Include="Images\sonChanel.png" />
-    <Content Include="Images\sonduongLadykin.png" />
-    <Content Include="Images\sonduongLamer.png" />
-    <Content Include="Images\sonduongVacosi.png" />
-    <Content Include="Images\sonHeraSensual.png" />
-    <Content Include="Images\sonKaneboIntense.png" />
-    <Content Include="Images\sonmoiBourjois.png" />
-    <Content Include="Images\sonthoiFOXH04.png" />
-    <Content Include="Images\sonVacci.png" />
-    <Content Include="Images\sophialogo.png" />
-    <Content Include="Images\suaruamatHistolab.png" />
-    <Content Include="Images\suaruamatLaRochePosay.png" />
-    <Content Include="Images\suaruamatLivingNature.jpg" />
-    <Content Include="Images\suaruamatOHUI.png" />
-    <Content Include="Images\suaruamatSebiaclear.png" />
-    <Content Include="Images\suaruamatSeoulrose.png" />
-    <Content Include="Images\suaruamatSHO.png" />
-    <Content Include="Images\suaruamatUriageDepiderm.png" />
     <Content Include="Models\WebThuVienEF.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>WebThuVienEF.Context.cs</LastGenOutput>
@@ -506,11 +471,26 @@
     <Content Include="Views\GioHang\Index.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\Logout.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Views\Manage\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />

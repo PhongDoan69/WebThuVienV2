@@ -12,7 +12,7 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using WebThuVienV2.Models;
 
-namespace WebMyPham
+namespace WebThuVienV2 
 {
     public class EmailService : IIdentityMessageService
     {
